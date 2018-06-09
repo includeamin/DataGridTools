@@ -16,3 +16,18 @@ Action on Datagrid
             DialogHost.IsOpen = true;
         }
 ```
+# change color of datagrid row depend on cell value
+ ```
+  <DataGrid Grid.Row="1"  x:Name="DataGrid"  SelectionChanged="DataGrid_SelectionChanged" AreRowDetailsFrozen="True">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding State}" Value="LOW">
+                                        <Setter Property="Background" Value="Red"></Setter>
+                                    </DataTrigger>
+                                   
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+ ```
